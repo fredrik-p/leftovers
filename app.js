@@ -24,9 +24,9 @@
 
     // Button
 
-    let button = document.querySelector('#generateNewRecipe');
+    let button = document.querySelector('.formRecipe');
 
-    button.addEventListener('click', (e) => {
+    button.addEventListener('submit', (e) => {
         e.preventDefault();
-        // console.log('I´ve been clicked');
+        console.log('I´ve been clicked');
     });
