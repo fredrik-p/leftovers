@@ -14,11 +14,23 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <h1>Random recipe generator</h1>
+        
 
+        <form>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="Recipes">Recipes</label>
+                        <input type="recipe" class="form-control" id="exampleInputRecipe" aria-describedby="recipeHelp" placeholder="Enter recipe">
+                    </div>
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+            </div>
+                <button id="generateNewRecipe" class="btn btn-success">Surprise me!</button>
+          </form>
 
-        <button id="generateNewRecipe" class="btn btn-success">Surprise me!</button>
     </div>
 
     <script src="app.js"></script>

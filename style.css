@@ -2,3 +2,9 @@ body {
     background-image: url("eat-321671_1920.jpg");
     background-size: cover;
 }
+
+.form-control {
+    max-width: 49%;
+    min-width: 100px;
+
+}
