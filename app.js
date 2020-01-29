@@ -34,24 +34,44 @@
 
                 let output =
 
-                `<div class="img-body">
-                    <img src="${data.recipes[0].image}" class="card-img-top" alt="">
+
+
+///NEW
+
+
+                `            <div class="img-body">
+                <div class="image-cropper">
+                    <img src="${data.recipes[0].image}"
+                        class="card-img-top" alt="">
+                </div>
             </div>
 
-                    <div class="card">
+            <div class="card">
 
-                        <div class="card-body">
-                            <h2 class="card-title">${data.recipes[0].title}</h2>
-                            <ul class="ingredients" id="ingredientList">
-                            </ul>
-                            <ol class="instruction" id="instructionlist">
-                            </ol>
-                            <p class="card-text instructions">${data.recipes[0].cookingMinutes} Minuter</p>
-                            <p class="card-text instructions">${data.recipes[0].servings} Potioner</p>
+                <div class="card-body">
+                    <h2 class="card-title">${data.recipes[0].title}</h2>
+                    <div class="serving-wrapper">
+                        <div class="serving">
+                            <p>🍽 ${data.recipes[0].servings}</p>
+
+                        </div>
+                        <div class="estimated-time">
+                            <p>🕣 ${data.recipes[0].readyInMinutes} min</p>
+
 
                         </div>
                     </div>
-                </div>`;
+                    <h3>Ingredients</h3>
+                    <ul class="ingredients" id="ingredientList">
+                        
+                    </ul>
+
+                    <h3>Instructions</h3>
+                    <ol class="instruction" id="instructionlist">
+                            </ol>
+
+                </div>
+            </div>`;
                 document.querySelector("#recipe").innerHTML = output;
 
                 
@@ -62,7 +82,7 @@
                     let liEl = document.createElement("LI");
                     //<li>${item.name} ${item.measures.metric.amount} ${item.measures.metric.unitShort} </li>
 
-                    liEl.innerHTML = `${ item.name }: ${ item.measures.metric.amount } ${ item.measures.metric.unitShort }`;
+                    liEl.innerHTML = `${item.measures.metric.amount} ${item.measures.metric.unitShort} ${item.name }`;
                     document.querySelector("#ingredientList").append(liEl);
                 });
 
@@ -70,11 +90,11 @@
                 const instruction = data.recipes[0].analyzedInstructions[0].steps;
 
                 instruction.forEach((res) => {
-                    let liElE = document.createElement("LI");
+                    let liEl1 = document.createElement("LI");
                     //<li>${item.name} ${item.measures.metric.amount} ${item.measures.metric.unitShort} </li>
 
-                    liElE.innerHTML = `${res.step}`;
-                    document.querySelector("#instructionlist").append(liElE);
+                    liEl1.innerHTML = `${res.step}`;
+                    document.querySelector("#instructionlist").append(liEl1);
                 });
             })
             .catch(err => {
