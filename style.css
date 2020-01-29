@@ -1,10 +1,37 @@
 body {
     background-image: url("eat-321671_1920.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+/*.container {
+	padding: 1em;
+	height: auto;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    
+	/*border-radius: 1em;
+	box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 1),
+	12px 12px 12px 0 rgba(0, 0, 0, 0.3);
+  }*/
+
+
+
+h1 {
+    text-align: center;
 }
 
-.form-control {
-    max-width: 49%;
-    min-width: 100px;
+#generateNewRecipe {
+    margin: 1rem auto;
+    width: 100%;
+}
 
+.img-body {
+    background: transparent;
+}
+.card-img-top {
+    border-radius: 50%;
+    margin-bottom: 1rem;
 }
