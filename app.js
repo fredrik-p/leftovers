@@ -46,8 +46,8 @@
                             </ul>
                             <ol class="instruction" id="instructionlist">
                             </ol>
-                            <p class="card-text instructions">${data.recipes[0].cookingMinutes} Minuter</p>
-                            <p class="card-text instructions">${data.recipes[0].servings} Potioner</p>
+                            <p class="card-text">${data.recipes[0].readyInMinutes} Minuter</p>
+                            <p class="card-text">${data.recipes[0].servings} Potioner</p>
 
                         </div>
                     </div>
